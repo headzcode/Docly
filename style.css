@@ -1,0 +1,251 @@
+style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .editor-container {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            margin-top: 20px;
+            height: calc(100% - 140px);
+        }
+
+        .toolbar {
+            background-color: var(--secondary-bg);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .toolbar button {
+            background-color: var(--header-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .toolbar button:hover {
+            background-color: var(--border-color);
+        }
+
+        .editor, .preview {
+            flex: 1;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-header {
+            background-color: var(--secondary-bg);
+            padding: 10px 16px;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        #markdown-input {
+            flex: 1;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            border: none;
+            padding: 16px;
+            resize: none;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            outline: none;
+        }
+
+        #preview-area {
+            flex: 1;
+            background-color: var(--bg-dark);
+            padding: 16px;
+            overflow: auto;
+        }
+
+        .action-buttons {
+            margin-top: 16px;
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .action-buttons button {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .primary-button {
+            background-color: var(--button-bg);
+            color: white;
+            border: none;
+        }
+
+        .primary-button:hover {
+            background-color: var(--button-hover);
+        }
+
+        .secondary-button {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .secondary-button:hover {
+            background-color: var(--secondary-bg);
+        }
+
+        /* Estilos para a visualização do Markdown */
+        #preview-area h1, #preview-area h2 {
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 16px;
+            margin-top: 24px;
+        }
+
+        #preview-area h1 {
+            font-size: 2em;
+        }
+
+        #preview-area h2 {
+            font-size: 1.5em;
+        }
+
+        #preview-area h3 {
+            font-size: 1.25em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #preview-area h4, #preview-area h5, #preview-area h6 {
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        #preview-area p, #preview-area ul, #preview-area ol {
+            margin-bottom: 16px;
+        }
+
+        #preview-area a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        #preview-area a:hover {
+            text-decoration: underline;
+        }
+
+        #preview-area blockquote {
+            padding: 0 1em;
+            color: #8b949e;
+            border-left: 0.25em solid var(--border-color);
+            margin-bottom: 16px;
+        }
+
+        #preview-area code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: var(--code-bg);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 85%;
+        }
+
+        #preview-area pre {
+            background-color: var(--code-bg);
+            border-radius: 6px;
+            padding: 16px;
+            overflow: auto;
+            margin-bottom: 16px;
+        }
+
+        #preview-area pre code {
+            background-color: transparent;
+            padding: 0;
+            white-space: pre;
+        }
+
+        #preview-area ul, #preview-area ol {
+            padding-left: 2em;
+        }
+
+        #preview-area img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #preview-area table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        #preview-area table th, #preview-area table td {
+            border: 1px solid var(--border-color);
+            padding: 6px 13px;
+        }
+
+        #preview-area table th {
+            background-color: var(--secondary-bg);
+        }
+
+        #preview-area hr {
+            height: 0.25em;
+            background-color: var(--border-color);
+            border: 0;
+            margin: 24px 0;
+        }
+
+        @media (max-width: 768px) {
+            .editor-container {
+                flex-direction: column;
+            }
+        }

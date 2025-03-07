@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de README.MD - Estilo GitHub</title>
+    <style>
+      
+        :root {
+            --bg-dark: #0d1117;
+            --text-primary: #c9d1d9;
+            --border-color: #30363d;
+            --header-bg: #161b22;
+            --button-bg: #238636;
+            --button-hover: #2ea043;
+            --link-color: #58a6ff;
+            --code-bg: #1f2937;
+            --secondary-bg: #161b22;
+            --accent-color: #f78166;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>Editor de README.MD</span>
+            </div>
+           
+        </header>
+
+        <div class="toolbar">
+            <button id="btn-h1">Título (H1)</button>
+            <button id="btn-h2">Subtítulo (H2)</button>
+            <button id="btn-h3">H3</button>
+            <button id="btn-bold">Negrito</button>
+            <button id="btn-italic">Itálico</button>
+            <button id="btn-link">Link</button>
+            <button id="btn-image">Imagem</button>
+            <button id="btn-code">Código</button>
+            <button id="btn-codeblock">Bloco de Código</button>
+            <button id="btn-quote">Citação</button>
+            <button id="btn-list">Lista</button>
+            <button id="btn-numlist">Lista Numerada</button>
+            <button id="btn-table">Tabela</button>
+            <button id="btn-hr">Linha Horizontal</button>
+            <button id="btn-badge">Badge</button>
+        </div>
+
+        <div class="editor-container">
+            <div class="editor">
+                <div class="panel-header">Markdown</div>
+                <textarea id="markdown-input" placeholder="Digite seu markdown aqui..."></textarea>
+            </div>
+            <div class="preview">
+                <div class="panel-header">Visualização</div>
+                <div id="preview-area"></div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="secondary-button" id="btn-clear">Limpar</button>
+            <button class="secondary-button" id="btn-template">Carregar Template</button>
+            <button class="primary-button" id="btn-copy">Copiar Markdown</button>
+           
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="main.js">main.js</script>
+</body>
+</html>
